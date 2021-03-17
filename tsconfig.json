@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": false,
+    "downlevelIteration": true,
+    "noEmit": false,
+    "keyofStringsOnly": true
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "dist",
+    "lib",
+    "wpbundles",
+    "build",
+    "deploy"
+  ]
+}

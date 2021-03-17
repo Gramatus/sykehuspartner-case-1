@@ -1,0 +1,93 @@
+body {
+  margin: 0px;
+}
+#maincontent {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "attr"
+    "rel"
+    "coredoc"
+    "main"
+    "footer";
+  grid-template-columns: auto;
+  grid-template-rows: auto repeat(4, minmax(250px, min-content)) auto;
+}
+@media screen and (min-width: 769px) and (max-width: 1230px) {
+  #maincontent {
+    grid-template-areas:
+      "header  header"
+      "attr    main  "
+      "rel     main  "
+      "coredoc main  "
+      ".       main  "
+      "footer  footer";
+    grid-template-columns: 300px auto;
+    grid-template-rows: auto repeat(4, minmax(250px, min-content)) auto;
+  }
+}
+@media screen and (min-width: 1231px) {
+  #maincontent {
+    grid-template-areas:
+      "header header header "
+      "attr   main   rel    "
+      "attr   main   coredoc"
+      ".      main   .      "
+      "footer footer footer ";
+    grid-template-columns: 300px auto 300px;
+    grid-template-rows: auto repeat(3, minmax(250px, min-content)) auto;
+  }
+}
+#attributes,
+#relations,
+#coredocuments {
+  border: 3px dotted black;
+}
+#header {
+  grid-area: header;
+}
+#attributes {
+  grid-area: attr;
+}
+#pagemain {
+  grid-area: main;
+  position: relative;
+}
+#pagemain #pagecontent {
+  padding-bottom: 500px;
+}
+#pagemain #documentlisting {
+  position: fixed;
+  bottom: 0px;
+  height: 400px;
+  border-top: 1px solid black;
+  background-color: #fff;
+  left: 0px;
+  right: 0px;
+}
+@media screen and (min-width: 769px) and (max-width: 1230px) {
+  #pagemain #documentlisting {
+    left: 300px;
+    right: 0px;
+  }
+}
+@media screen and (min-width: 1231px) {
+  #pagemain #documentlisting {
+    left: 300px;
+    right: 300px;
+  }
+}
+#relations {
+  grid-area: rel;
+}
+#coredocuments {
+  grid-area: coredoc;
+}
+#footer {
+  grid-area: footer;
+}
+.MainComponent {
+  min-height: 200px;
+  width: 100%;
+  background-color: beige;
+}
