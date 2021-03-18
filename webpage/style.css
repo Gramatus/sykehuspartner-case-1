@@ -90,4 +90,9 @@ body {
   min-height: 200px;
   width: 100%;
   background-color: beige;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.buttonTarget {
+  display: inline-block;
 }
